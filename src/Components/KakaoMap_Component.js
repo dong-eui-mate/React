@@ -46,16 +46,15 @@ const KakaoMap = () => {
             },
           }}
           title={position.title}
-          onClick={(event) => {
+          onClick={() => {
             setIsOpen(true);
-            console.log(event);
-            setClickMarker(event.id);
+            setClickMarker(index);
           }}
         />
       ))}
       {isOpen && (
         <CustomOverlayMap position={positions[clickMarker].latlng}>
-          <Overlay />
+          <Overlay id={clickMarker} setIsOpen={setIsOpen} />
         </CustomOverlayMap>
       )}
     </Map>
