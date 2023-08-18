@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { title, latlng, imagesSrc } from "../Informations/KakaoMap_Information";
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
+import { Overlay } from "./Overlay_Component";
 
 const KakaoMap = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const [clickMarker, setClickMarker] = useState(0);
+
   const positions = [];
 
   for (let i = 0; i < latlng.length; i++) {
@@ -31,6 +35,7 @@ const KakaoMap = () => {
     >
       {positions.map((position, index) => (
         <MapMarker
+          id={index}
           key={`${position.title}-${position.latlng}`}
           position={position.latlng}
           image={{
@@ -41,8 +46,18 @@ const KakaoMap = () => {
             },
           }}
           title={position.title}
+          onClick={(event) => {
+            setIsOpen(true);
+            console.log(event);
+            setClickMarker(event.id);
+          }}
         />
       ))}
+      {isOpen && (
+        <CustomOverlayMap position={positions[clickMarker].latlng}>
+          <Overlay />
+        </CustomOverlayMap>
+      )}
     </Map>
   );
 };
