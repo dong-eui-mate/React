@@ -1,13 +1,17 @@
 import { StyledWidget } from "../Styles/StyledWidget";
+import { Table } from "./Table_Component";
+import { Weather } from "./Weather_Component";
 
 const Widget = () => {
   return (
-    <StyledWidget>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-    </StyledWidget>
+    <>
+      <StyledWidget height={"200px"}>
+        <Weather />
+      </StyledWidget>
+      <StyledWidget height={"300px"}>
+        <Table />
+      </StyledWidget>
+    </>
   );
 };
 
