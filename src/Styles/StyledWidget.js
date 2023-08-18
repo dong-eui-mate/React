@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledWidget = styled.div`
   width: 350px;
-  height: 200px;
+  height: ${(props) => props.height};
   background-color: #f5f5f5;
 
   border: 1px solid gray;
@@ -12,6 +12,7 @@ const StyledWidget = styled.div`
   flex-direction: column;
 
   padding: 15px;
+  margin-bottom: 15px;
 `;
 
 export { StyledWidget };
