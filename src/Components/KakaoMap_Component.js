@@ -29,7 +29,7 @@ const KakaoMap = () => {
       }}
       style={{
         width: "350px",
-        height: "600px",
+        height: "500px",
         border: "1px solid lightgray",
         borderRadius: "10px",
       }}

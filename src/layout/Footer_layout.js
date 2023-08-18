@@ -36,7 +36,7 @@ const Footer = () => {
 const FooterWrap = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px 0;
   border-top: 1px solid gray;
   width: 350px;

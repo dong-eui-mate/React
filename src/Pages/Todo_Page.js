@@ -4,6 +4,7 @@ import { ItemInput } from "../Components/ItemInput_Component";
 import { Header } from "../layout/Headers_layout";
 import { Footer } from "../layout/Footer_layout";
 import { Nav } from "../layout/Nav_layout";
+import { StyledBody } from "../Styles/StyledBody";
 
 const Todo = () => {
   // 1. 로컬스토리지로 데이터 유지할 예정
@@ -75,14 +76,16 @@ const Todo = () => {
 
   return (
     <>
-      <Header Title="Todo List"/>
+      <Header Title="Todo List" />
       <Nav />
-      <ItemInput createTodo={createTodo} />
-      <ItemList
-        contents={contents}
-        updateTodo={updateTodo}
-        deleteTodo={deleteTodo}
-      />
+      <StyledBody>
+        <ItemInput createTodo={createTodo} />
+        <ItemList
+          contents={contents}
+          updateTodo={updateTodo}
+          deleteTodo={deleteTodo}
+        />
+      </StyledBody>
       <Footer />
     </>
   );
