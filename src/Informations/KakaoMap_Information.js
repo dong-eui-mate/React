@@ -27,7 +27,7 @@ const title = [
   "행복기숙사", // 26
 ];
 
-const positions = [
+const latlng = [
   { latitude: 35.13951161812107, longitude: 129.03350978047823 }, // 1
   { latitude: 35.139431906542, longitude: 129.03423185801213 }, // 2
   { latitude: 35.13965851691776, longitude: 129.03281131368064 }, // 3
@@ -85,4 +85,4 @@ const imagesSrc = [
   "https://cdn-icons-png.flaticon.com/128/11517/11517177.png", // 26
 ];
 
-export { title, positions, imagesSrc };
+export { title, latlng, imagesSrc };
