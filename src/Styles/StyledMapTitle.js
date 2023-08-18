@@ -11,6 +11,8 @@ const StyledMapTitle = styled.div`
 
   font-size: 20px;
 
+  padding-left: 5px;
+
   border-bottom: 1px solid lightgray;
 `;
 
