@@ -4,7 +4,7 @@ import { StyledHeader } from "../Styles/StyledHeader";
 const Header = (props) => {
   return (
     <StyledHeader>
-      <Title Title={props.Title}/>
+      <Title Title="Deu - mate" />
     </StyledHeader>
   );
 };

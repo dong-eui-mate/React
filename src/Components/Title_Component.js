@@ -1,7 +1,7 @@
 import { StyledTitle } from "../Styles/StyledTitle";
 
 const Title = (props) => {
-  return <a href="/"><StyledTitle>{props.Title}</StyledTitle></a>;
+  return <StyledTitle>{props.Title}</StyledTitle>;
 };
 
 export { Title };
