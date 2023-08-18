@@ -4,7 +4,7 @@ import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
 import { Overlay } from "./Overlay_Component";
 
 const KakaoMap = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [clickMarker, setClickMarker] = useState(0);
 
   const positions = [];

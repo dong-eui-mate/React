@@ -23,7 +23,8 @@ const Title = (props) => {
         <span>{title[props.id]}</span>
       </div>
       <StyledDelete
-        onClick={() => {
+        onClick={(event) => {
+          event.stopPropagation();
           props.setIsOpen(false);
         }}
       >
@@ -43,10 +44,26 @@ const Content = (props) => {
 };
 
 const Address = (props) => {
+  const myAddress = `부산진구 엄광로 176 ${props.id + 1}번 건물`;
+
+  const handleCopyClipBoard = async () => {
+    try {
+      await navigator.clipboard.writeText(myAddress);
+      alert("복사 성공!");
+    } catch (error) {
+      alert("복사 실패!");
+    }
+  };
+
   return (
     <StyledMapAddress>
-      <div onClick={console.log("click address")}>
-        {`부산진구 엄광로 176 ${props.id + 1}번 건물`}
+      <div
+        onClick={(event) => {
+          event.stopPropagation();
+          handleCopyClipBoard();
+        }}
+      >
+        {myAddress}
       </div>
     </StyledMapAddress>
   );
