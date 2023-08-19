@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="https://github.com/dong-eui-mate">
           <FooterBody>GitHub Link</FooterBody>
         </a>
-        <a href="">
+        <a href="https://github.com/dong-eui-mate">
           <FooterBody>App Download Link</FooterBody>
         </a>
         <FooterBody>

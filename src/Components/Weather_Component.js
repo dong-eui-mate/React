@@ -1,5 +1,6 @@
 import {
   FaCloud,
+  FaDroplet,
   FaTemperatureQuarter,
   FaTemperatureThreeQuarters,
   FaWind,
@@ -45,7 +46,7 @@ const Weather = () => {
           °C
         </InfoItem>
         <InfoItem>
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGMtNC44NyA3LjE5Ny04IDExLjY5OS04IDE2LjA3NSAwIDQuMzc4IDMuNTc5IDcuOTI1IDggNy45MjVzOC0zLjU0NyA4LTcuOTI1YzAtNC4zNzYtMy4xMy04Ljg3OC04LTE2LjA3NXptLS4wMjcgNS4xMmMuNDY3LjcyNSAxLjAyNyAxLjk4NyAxLjAyNyAzLjMyIDAgMy45MDgtNCA0LjU0OC00IDIuMTcgMC0xLjYzMyAxLjk4OC00LjA0NCAyLjk3My01LjQ5eiIvPjwvc3ZnPg==" />
+          <FaDroplet className="humidity"> size={20}</FaDroplet>
           {data.humidity}%
         </InfoItem>
         <InfoItem>
